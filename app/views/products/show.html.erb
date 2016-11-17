@@ -5,6 +5,7 @@
   <%= number_to_currency @product.price %>
 </p>
 
+<%= image_tag attachment_url(@product, :photo, :fill, 300, 300, format: "gif") %>
 
 <% unless @product.category.nil? %>
 <p>

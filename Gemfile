@@ -46,7 +46,12 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-require 'rbconfig'
- if RbConfig::CONFIG['target_os'] =~ /darwin(1[0-3])/i
-   gem 'rb-fsevent', '<= 0.9.4'
- end
+
+gem 'refile', github: 'refile/refile', require: 'refile/rails'
+gem 'refile-mini_magick', github: 'refile/refile-mini_magick'
+gem 'sinatra', github: 'sinatra/sinatra', branch: 'master'
+
+# require 'rbconfig'
+#  if RbConfig::CONFIG['target_os'] =~ /darwin(1[0-3])/i
+#    gem 'rb-fsevent', '<= 0.9.4'
+#  end
